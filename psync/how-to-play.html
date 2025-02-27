@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play - Psync</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #f0f7ff, #ffffff);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: #1a365d;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #2c5282;
+            font-size: 1.25rem;
+        }
+
+        .collapsible {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .collapsible-header {
+            padding: 1.5rem;
+            background: #f8fafc;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background-color 0.3s ease;
+        }
+
+        .collapsible-header:hover {
+            background: #f0f5fa;
+        }
+
+        .collapsible-header h2 {
+            color: #2c5282;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .collapsible-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: white;
+        }
+
+        .collapsible-inner {
+            padding: 1.5rem;
+        }
+
+        .active .collapsible-content {
+            max-height: 1000px;
+        }
+
+        .icon {
+            width: 32px;
+            height: 32px;
+            background: #e2e8f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .important-note {
+            background: #fff5f5;
+            border-left: 4px solid #fc8181;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip {
+            background: #fffbeb;
+            border-left: 4px solid #f6e05e;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>How to Play Psync</h1>
+            <p>"A Cooperative Card Game of Perfect Timing"</p>
+        </header>
+
+        <div class="collapsible">
+            <div class="collapsible-header">
+                <h2><div class="icon">🎮</div>Game Overview</h2>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="collapsible-inner">
+                    <p>It is not competative, its collabarative !!! Dive into Psync, a pulse-pounding card game that tests the limits of teamwork and non-verbal communication.</p>
+                    <div class="important-note">
+                        <strong>Core Concept:</strong> The lower a card is, the earlier it should be played. A 5 would be played quickly, while an 80 would be held longer.
+                    </div>
+                    <div class="tip">
+                        <strong>Key to Success:</strong> Over time, players become synchronized in their sense of timing, developing a collective feeling for the right moment to play each card.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <div class="collapsible-header">
+                <h2><div class="icon">📋</div>Game Setup</h2>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="collapsible-inner">
+                    <p>Components needed:</p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                        <li>100 number cards (1-100)</li>
+                        <li>12 level cards (1-12)</li>
+                        <li>Life cards</li>
+                        <li>Star cards</li>
+                    </ul>
+                    
+                    <div class="grid">
+                        <div class="card">
+                            <h3>2-3 Players</h3>
+                            <ul>
+                                <li>Levels 1-12</li>
+                                <li>2 lives</li>
+                                <li>1 star</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>4-5 Players</h3>
+                            <ul>
+                                <li>Levels 1-10</li>
+                                <li>3 lives</li>
+                                <li>1 star</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>5-6 Players</h3>
+                            <ul>
+                                <li>Levels 1-8</li>
+                                <li>4 lives</li>
+                                <li>1 star</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <div class="collapsible-header">
+                <h2><div class="icon">🎯</div>Gameplay Rules</h2>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="collapsible-inner">
+                    <h3>Starting Each Level</h3>
+                    <p>1. Each player places one hand palm down on the table to indicate readiness</p>
+                    <p>2. When all are ready, remove hands and begin</p>
+                    <p>3. Players can call "stop" at any time to refocus the team</p>
+
+                    <div class="important-note">
+                        <strong>Critical Rules:</strong>
+                        <ul style="margin-left: 1.5rem;">
+                            <li>No communication about card values</li>
+                            <li>No secret signals</li>
+                            <li>No taking turns - play when you believe you have the lowest card</li>
+                            <li>Cards must be played one at a time in ascending order</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <div class="collapsible-header">
+                <h2><div class="icon">⚠️</div>Errors & Penalties</h2>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="collapsible-inner">
+                    <p>If a card is played out of sequence:</p>
+                    <ol style="margin-left: 1.5rem;">
+                        <li>Game is immediately halted</li>
+                        <li>Team loses one life</li>
+                        <li>All cards lower than the played card must be discarded</li>
+                        <li>Team refocuses and continues the current level</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <div class="collapsible-header">
+                <h2><div class="icon">⭐</div>Special Actions & Rewards</h2>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="collapsible-inner">
+                    <h3>Throwing Stars</h3>
+                    <p>Players can use a throwing star to help the team:</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Any player can suggest using a star by raising their hand</li>
+                        <li>If all agree, each player discards their lowest card</li>
+                        <li>Discard one throwing star token</li>
+                    </ul>
+
+                    <h3>Level Rewards</h3>
+                    <p>Teams receive rewards for completing certain levels:</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Level 2: +1 throwing star</li>
+                        <li>Levels 3, 5, 6, 8, 9: Additional rewards as shown on level cards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <div class="collapsible-header">
+                <h2><div class="icon">🏆</div>Victory & Challenge Mode</h2>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="collapsible-inner">
+                    <h3>Victory Conditions</h3>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Complete all levels successfully</li>
+                        <li>Maintain at least one life token</li>
+                    </ul>
+
+                    <div class="tip">
+                        <strong>Challenge Mode:</strong>
+                        <p>After winning, continue playing in blind mode:</p>
+                        <ul style="margin-left: 1.5rem;">
+                            <li>Start at level 1 with remaining lives and stars</li>
+                            <li>Play cards face down</li>
+                            <li>Check sequence at the end of each level</li>
+                            <li>Lose one life for any mistakes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="collapsible">
+        <div class="collapsible-header">
+            <h2><div class="icon">🏆</div>Mechanism</h2>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="collapsible-content">
+            <div class="collapsible-inner">
+                <h3>Victory Conditions</h3>
+                <ul style="margin-left: 1.5rem;">
+                    <li>Once players understand the rules, they should start playing without reading the final instructions to discover the game’s secret themselves.</li>
+                    <li>There is a risk of losing a life early, but the reward is a special "Ahhhh!" moment.</li>
+                </ul>
+    
+                <h3>Important Notes</h3>
+                <ul style="margin-left: 1.5rem;">
+                    <li><strong>Psync</strong> is a game of synchronization, relying on players' sense of time.</li>
+                    <li>Lower-numbered cards are played earlier, while higher numbers are held longer.</li>
+                    <li>Players improve synchronization over time, transforming what seems like luck into skill.</li>
+                    <li>Concentration is crucial at the start of each level; players should avoid explicitly counting seconds.</li>
+                    <li>The key to success is developing a collective sense of when to play – the team must become one!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+<a href="/psync/level-1.html" style="position: fixed; bottom: 40px; right: 40px; background-color: #007BFF; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; text-decoration: none; box-shadow: 2px 2px 5px rgba(0,0,0,0.3);">Example Game Play →</a>
+
+    <script>
+        // Add click handlers for collapsible panels
+        document.querySelectorAll('.collapsible-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const parent = header.parentElement;
+                parent.classList.toggle('active');
+                
+                // Close other panels
+                document.querySelectorAll('.collapsible').forEach(panel => {
+                    if (panel !== parent) {
+                        panel.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Open first panel by default
+        document.querySelector('.collapsible').classList.add('active');
+    </script>
+</body>
+</html>
